@@ -28,7 +28,7 @@
 
 - Code Convention
     - [Kotlin Style Guide](https://kotlinlang.org/docs/reference/coding-conventions.html)
-    - [Ktlint Plugin(https://github.com/jlleitschuh/ktlint-gradle)
+    - [Ktlint Plugin](https://github.com/jlleitschuh/ktlint-gradle)
         - Ktlint Plugin은 많은 Wrapper Plugin이 존재하나, 위 Plugin이 Star 수도 많고 자주 사용됨.
 
 # License
