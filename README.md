@@ -4,6 +4,10 @@
 
 - [Real-World](https://github.com/gothinkster/realworld) 프로젝트의 Back-End 부분을 Kotlin을 기반으로 하는 프로젝트
 
+## 기록
+
+- 프로젝트과 관련된 내용은 [블로그](https://jongwoon.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/RealWorld) 에 기록할 예정입니다.
+
 ## 기술 스택
 
 - Kotlin 1.6
