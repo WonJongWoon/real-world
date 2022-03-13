@@ -18,9 +18,8 @@ class UserManagementController(
     private val userManagementUseCase: UserManagementUseCase
 ) {
 
-    @PostMapping(path = ["/users/"])
+    @PostMapping(path = ["/users"])
     fun register(@RequestBody registrationCommand: RegistrationCommand) {
-        println("UserManagementController.register")
         userManagementUseCase.register(registrationCommand)
     }
 }

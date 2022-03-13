@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component
 @Component
 class UserMapper(private val passwordEncoder: PasswordEncoder) {
 
-    fun mapToUser(registrationCommand: RegistrationCommand) = User(
-        registrationCommand.username,
-        registrationCommand.email,
-        passwordEncoder.encode(registrationCommand.password),
+    fun mapToUser(registrationDto: RegistrationCommand.RegistrationDto) = User(
+        registrationDto.username,
+        registrationDto.email,
+        passwordEncoder.encode(registrationDto.password),
         Strings.EMPTY,
         Strings.EMPTY
     )

@@ -22,10 +22,10 @@ abstract class BaseEntity : Serializable {
 
     @CreatedDate
     @Column(updatable = false)
-    open val createdAt: LocalDateTime = lateInit()
+    open var createdAt: LocalDateTime = lateInit()
 
     @LastModifiedDate
-    open val modifiedAt: LocalDateTime = lateInit()
+    open var modifiedAt: LocalDateTime = lateInit()
 }
 
 @Suppress("UNCHECKED_CAST")

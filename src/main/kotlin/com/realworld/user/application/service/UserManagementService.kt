@@ -9,6 +9,6 @@ import org.springframework.stereotype.Service
 class UserManagementService(private val loadUserPort: LoadUserPort) : UserManagementUseCase {
 
     override fun register(requestDto: RegistrationCommand) {
-        loadUserPort.register(requestDto)
+        loadUserPort.register(requestDto.user)
     }
 }

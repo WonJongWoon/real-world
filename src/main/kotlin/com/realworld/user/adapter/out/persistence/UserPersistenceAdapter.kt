@@ -10,6 +10,6 @@ class UserPersistenceAdapter(
     private val userMapper: UserMapper
 ) : LoadUserPort {
 
-    override fun register(registrationCommand: RegistrationCommand) =
-        userRepository.save(userMapper.mapToUser(registrationCommand))
+    override fun register(registrationDto: RegistrationCommand.RegistrationDto) =
+        userRepository.save(userMapper.mapToUser(registrationDto))
 }
