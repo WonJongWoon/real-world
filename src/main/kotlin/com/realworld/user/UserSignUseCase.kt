@@ -55,7 +55,5 @@ class UserSignService(
                 bio = it.bio,
                 image = it.image
             )
-        } ?: run {
-            throw UserNotFoundException("존재하지 않는 유저입니다. email = ${signInRequest.email}")
-        }
+        } ?: throw UserNotFoundException("존재하지 않는 유저입니다. email = ${signInRequest.email}")
 }
