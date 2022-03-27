@@ -1,1 +1,16 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
 
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  datasource:
+    hikari:
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:tcp://localhost/~/realworld
+      username: sa
+      password:
