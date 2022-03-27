@@ -43,10 +43,8 @@ class UserSignService(
 
     override fun signIn(signInRequest: SignRequest.In): UserResponse =
         userRepository.findUserByEmail(signInRequest.email)?.let {
-            log.info("SignIn : $signInRequest")
 
             if (!passwordEncoder.matches(signInRequest.password, it.password)) {
-                log.info("Failed Sign In, Because The password is incorrect.")
                 throw InvalidPasswordException("비밀번호가 올바르지 않습니다. email = ${signInRequest.email}")
             }
 
@@ -58,8 +56,7 @@ class UserSignService(
                 image = it.image
             )
         } ?: run {
-            log.warn("Failed Sign In : $signInRequest")
-            throw UserNotFoundException("존재하지 않은 유저입니다. email = ${signInRequest.email}")
+            throw UserNotFoundException("존재하지 않는 유저입니다. email = ${signInRequest.email}")
         }
 }
 
