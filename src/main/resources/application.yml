@@ -18,3 +18,7 @@ spring:
   jackson:
     deserialization:
       UNWRAP_ROOT_VALUE: true
+
+jwt:
+  secretKey: "lEfaHKqrbY8sVLp34wRbSHGxxB7oVWWDf8P7Yu9EugFnpP4Oj4WOFCfLdlbXpoDJ"
+  expirationPeriod: 86400
