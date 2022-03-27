@@ -1,4 +1,3 @@
 package com.realworld.exception
 
-class UserNotFoundException {
-}
+class UserNotFoundException(message: String) : RuntimeException(message)

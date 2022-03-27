@@ -1,4 +1,3 @@
 package com.realworld.exception
 
-class InvalidPasswordException {
-}
+class InvalidPasswordException(message: String) : RuntimeException(message)
