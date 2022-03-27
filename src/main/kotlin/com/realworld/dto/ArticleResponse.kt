@@ -16,13 +16,5 @@ data class ArticleResponse(
     val updatedAt: LocalDateTime,
     val favorited: Boolean,
     val favoritesCount: Long,
-    val author: Author
-) {
-
-    data class Author(
-        val userName: String,
-        val bio: String,
-        val image: String?,
-        val following: Boolean
-    )
-}
+    val author: AuthorResponse
+)
