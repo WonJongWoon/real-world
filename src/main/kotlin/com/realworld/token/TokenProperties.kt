@@ -2,7 +2,6 @@ package com.realworld.token
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding
-import org.springframework.stereotype.Component
 
 @ConstructorBinding
 @ConfigurationProperties(prefix = "jwt")

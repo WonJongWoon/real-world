@@ -1,7 +1,10 @@
 package com.realworld.token
 
-import com.sun.xml.bind.api.impl.NameConverter.Standard
-import io.jsonwebtoken.*
+import io.jsonwebtoken.ExpiredJwtException
+import io.jsonwebtoken.Jwts
+import io.jsonwebtoken.MalformedJwtException
+import io.jsonwebtoken.SignatureAlgorithm
+import io.jsonwebtoken.UnsupportedJwtException
 import io.jsonwebtoken.security.Keys
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
@@ -9,7 +12,7 @@ import java.nio.charset.StandardCharsets
 import java.security.SignatureException
 import java.time.LocalDateTime
 import java.time.ZoneId
-import java.util.*
+import java.util.Date
 
 @Component
 class TokenProvider(private val tokenProperties: TokenProperties) {

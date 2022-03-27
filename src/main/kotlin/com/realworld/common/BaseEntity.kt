@@ -5,8 +5,12 @@ import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.jpa.domain.support.AuditingEntityListener
 import java.io.Serializable
 import java.time.LocalDateTime
-import javax.persistence.*
+import javax.persistence.Column
+import javax.persistence.EntityListeners
+import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType.IDENTITY
+import javax.persistence.Id
+import javax.persistence.MappedSuperclass
 
 @EntityListeners(AuditingEntityListener::class)
 @MappedSuperclass
@@ -18,12 +22,12 @@ abstract class BaseEntity : Serializable {
     @Column(updatable = false, nullable = false)
     @CreatedDate
     var createdAt: LocalDateTime = lateinit()
-    private set
+        private set
 
     @Column(nullable = false)
     @LastModifiedDate
     var modifiedAt: LocalDateTime = lateinit()
-    private set
+        private set
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

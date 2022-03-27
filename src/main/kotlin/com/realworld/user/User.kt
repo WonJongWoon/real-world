@@ -1,7 +1,6 @@
 package com.realworld.user
 
 import com.realworld.common.BaseEntity
-import com.realworld.dto.UserResponse
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Table
