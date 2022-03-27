@@ -14,3 +14,7 @@ spring:
       jdbc-url: jdbc:h2:tcp://localhost/~/realworld
       username: sa
       password:
+
+  jackson:
+    deserialization:
+      UNWRAP_ROOT_VALUE: true
